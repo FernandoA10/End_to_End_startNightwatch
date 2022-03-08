@@ -3,27 +3,22 @@ module.exports = {
     'Google Advance search: Elon Musk' (browser){
         const mainQuery = 'Elon Musk'; 
 
+        const page = browser.page.googleAdvanceSearch();
 
-        const mainQueryInputSelector = 'input[name="as_q"]'; 
-        const languageDropdownOpenerSelector = "#lr_button";
-        const languageDropdownValueSelector = '.goog-menuitem[value="lang_it"]';
-        const lastUpdateDropdowOpenerSelector = '#as_qdr_button';
-        const lastUpdateDropdowValueSelector = '.goog-menuitem[value="m"]';
-        const submitButtonSelector = '.jfk-button[type="submit"]';
 
         //const resultPageQuerySelector = '#searchform input[name="q"][value="${mainQuery}"]';
         //const resultPageLastUpdateSelector = '[aria-label="Past month"]';
 
 
 
+        page
+            .navigate()
+            .setQuery(mainQuery)
+            .selectFilter('@languageDropdownOpener', 'it')
+            .selectFilter('@lastUpdateDropdowOpener', 'm')
+            .search()
+
         browser
-            .url('https://www.google.com.mx/advanced_search')
-            .setValue(mainQueryInputSelector, mainQuery)
-            .click(languageDropdownOpenerSelector)
-            .click(languageDropdownValueSelector)
-            .click(lastUpdateDropdowOpenerSelector)
-            .click(lastUpdateDropdowValueSelector)
-            .click(submitButtonSelector)
             .assert.urlContains('as_q=Elon+Musk','Query is Elon Musk')
             .assert.urlContains('lr=lang_it','Language is Italian')
             .assert.urlContains('as_qdr=m','Time period is Last Month')
