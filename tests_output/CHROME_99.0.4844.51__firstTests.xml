@@ -5,9 +5,9 @@
 
   <testsuite name="firstTests"
     errors="0" failures="0" hostname="" id="" package="firstTests" skipped="0"
-    tests="1" time="0.6560" timestamp="">
+    tests="1" time="0.7550" timestamp="">
   
-    <testcase name="My First Test case" classname="firstTests" time="0.6560" assertions="2">
+    <testcase name="My First Test case" classname="firstTests" time="0.7550" assertions="2">
 
     
 
@@ -15,6 +15,17 @@
     </testcase>
   
 
+  
+    <system-err>
+       NoSuchElementError: An error occurred while running .click() command on &lt;.goog-menuitem[value=${value}&#34;]&gt;: Timed out while waiting for element &#34;.goog-menuitem[value=${value}&#34;]&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+ {&#34;error&#34;:{&#34;name&#34;:&#34;InvalidSelectorError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+       at Page.selectFilter (/Users/l.fernandoanda/Desktop/API_Testing&amp;API_Automation/SESSIONS/Nightwatch/page-objects/googleAdvanceSearch.js:19:14)
+       at Object.Google Advance search: Elon Musk (/Users/l.fernandoanda/Desktop/API_Testing&amp;API_Automation/SESSIONS/Nightwatch/tests/google.js:17:14)
+ NoSuchElementError: An error occurred while running .click() command on &lt;.goog-menuitem[value=${value}&#34;]&gt;: Timed out while waiting for element &#34;.goog-menuitem[value=${value}&#34;]&#34; with &#34;css selector&#34; to be present for 5000 milliseconds.
+ {&#34;error&#34;:{&#34;name&#34;:&#34;InvalidSelectorError&#34;,&#34;remoteStacktrace&#34;:&#34;&#34;},&#34;status&#34;:-1,&#34;value&#34;:null}
+       at Page.selectFilter (/Users/l.fernandoanda/Desktop/API_Testing&amp;API_Automation/SESSIONS/Nightwatch/page-objects/googleAdvanceSearch.js:19:14)
+       at Object.Google Advance search: Elon Musk (/Users/l.fernandoanda/Desktop/API_Testing&amp;API_Automation/SESSIONS/Nightwatch/tests/google.js:18:14)
+    </system-err>
   
 
     
